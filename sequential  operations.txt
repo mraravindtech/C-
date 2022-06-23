@@ -1,0 +1,32 @@
+#include<fstream.h> 
+#include<iostream.h>
+#include<conio.h>
+void main()
+{
+char File1[20],File2[20],ch; 
+ifstream in_file; 
+ofstream out_file;
+cout<<" Enter The Name Of File To be Copy: \n";
+cout<<" File Name:";
+cin>>File1;
+cout<<" Enter The Name of File Where To copy: \n";
+cout<<" File Name:";
+cin>>File2;
+in_file.open(File1,ios::in);
+if(!in_file) 
+cout<<"An Error Occur While Opening File: \n";
+}
+out_file.open(File2,ios::app)
+if(!out_file) 
+{
+cout<<"An Error Occur While Opening File: \n";
+}
+while (in_file.get(ch)) 
+{
+out_file.put(ch); 
+}
+in_file.close(); 
+out_file.close();
+cout<<" \n\n Copy Successful...!! : \n";
+getch();
+}

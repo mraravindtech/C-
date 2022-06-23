@@ -1,0 +1,24 @@
+# include<iostream>
+using namespace std;
+int main()
+{
+int a,b,c;
+float d;
+cout<<"Enter a,b,c values";
+cin>>a>>b>>c;
+try
+{
+if((a-b)!=0)
+{
+d=c/(a-b);
+cout<<"Result is"<<d;
+}
+else
+throw(a-b);
+}
+catch(int i)
+{
+cout<<"Answer is infinite because a-b is:"<<i;
+}
+return 0;
+}

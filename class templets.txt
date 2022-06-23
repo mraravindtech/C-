@@ -1,0 +1,35 @@
+#include<iostream.h>
+#include<conio.h>
+template<class T>
+class sample
+{
+private:
+T value,value1,value2;
+public:
+voidgetdata();
+void sum();
+};
+template<class T>
+void sample <T>::getdata()
+{
+cin>>value1>>value2;
+}
+template<class T>
+void sample <T>::sum()
+{
+value=value1+value2;
+cout<<" sum value is "<<value<<endl;
+}
+void main()
+{
+clrscr();
+sample<int> obj1;
+sample<float> obj2;
+cout<<"Enter two integers "<<endl;
+obj1.getdata();
+obj1.sum();
+cout<<"Enter two floats "<<endl;
+obj2.getdata();
+obj2.sum();
+getch();
+}

@@ -1,0 +1,20 @@
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+void main(int argc, char * argv[])
+{
+int i, n, big;
+clrscr();
+n = argc;
+if(argc == 1)
+exit(0);
+big = atoi(argv[1]);
+// Loop to store largest number to large
+for(i = 2; i< n; i++)
+{
+if (big <atoi(argv[i]))
+big = atoi(argv[i]);
+}
+cout<<"Biggest element" <<big;
+getch();
+}

@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+class base //single base class
+{
+public:
+int x;
+voidgetdata()
+{
+cout<< "Enter value of x= ";
+cin>> x;
+}
+};
+class derive1 : public base // derived class from base class
+{
+public:
+int y;
+void readdata()
+{
+cout<< "\nEnter value of y= ";
+cin>> y;
+}
+};
+class derive2 : public derive1 // derived from class derive1
+{
+private:
+int z;
+public:
+void indata()
+{
+cout<< "\n Enter value of z= "; cin>> z;
+}
+void product()
+{
+cout<< "\n Product= " << x * y * z;
+}
+};
+20
+int main()
+{
+derive2 a; //object of derived class
+a.getdata();
+a.readdata();
+a.indata();
+a.product();
+return 0;
+}

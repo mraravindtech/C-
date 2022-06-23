@@ -1,0 +1,36 @@
+#include<iostream.h>
+#include<conio.h>
+#include<fstream.h>
+#include<stdlib.h>
+void main()
+{
+ofstream outfile;
+ifstream infile;
+char source [10],target[10];
+char ch;
+clrscr();
+cout<<"enter the source file name :";
+cin>>source;
+cout<<"enter the target file name :";
+cin>>target;
+infile.open(source);
+if(infile.fail())
+{
+cout<<"source file does not exist ";
+exit(1);
+}
+outfile.open(target);
+if(outfile.fail())
+{
+cout<<"unable to create file";
+exit(1);
+}
+while(!infile.eof())
+{
+ch=infile.get();
+outfile.put(ch);
+}
+infile.close();
+outfile.close();
+getch();
+}

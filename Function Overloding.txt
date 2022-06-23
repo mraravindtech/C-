@@ -1,0 +1,30 @@
+# include<iostream.h>
+# include<conio.h>
+void main()
+{
+int add(int,int);//Function prototype
+float add(float,float);
+double add(double,double);
+int a,b;
+float x,y;
+double c,d;
+cout<<"Enter the a,b values "<<endl;
+cin>>a>>b;
+cout<<"Enter the x,y values "<<endl;
+cin>>x>>y;
+cout<<"Enter the c,d values "<<endl;
+cin>>c>>d;
+cout<<"sum of integers "<<add(a,b)<<endl;
+cout<<"sum of floats "<<add(x,y)<<endl;
+cout<<"sum of doubles "<<add(c,d)<<endl;
+getch();
+}
+int add(inta,int b)
+{ return(a+b);
+}
+float add(float x,float y)
+{ return(x+y);
+}
+inline double add(double c,double d)
+{ return(c+d);
+}

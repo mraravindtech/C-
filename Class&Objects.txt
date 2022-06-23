@@ -1,0 +1,46 @@
+# include<iostream.h>
+# include<conio.h>
+class time
+{
+int hours;
+int minutes;
+public:
+void gettime(int h, int m)
+{
+hours=h;
+minutes=m;
+}
+void puttime(void)
+{
+cout<<hours<<"Hours and"<<endl;
+cout<<minutes<<"Minutes"<<endl;
+}
+void sum(time,time);
+};
+void time::sum(time t1,time t2)
+{
+minutes = t1.minutes+t2.minutes;
+hours = minutes/60;
+minutes = minutes = minutes%60;
+hours = hours+t1.hours+t2.hours;
+}
+const int size=2;
+void main()
+{
+clrscr();
+time t1[size],t2;
+t1[1].gettime(2,45);
+t1[2].gettime(3,30);
+t2.sum(t1[1],t1[2]);
+cout<<"-------"<<endl;
+cout<<"OBJECT AS ARGUMENTS"<<endl;
+cout<<"------\n"<<endl;
+cout<<"T1=";
+t1[1].puttime();
+cout<<"T2=";
+t1[2].puttime();
+cout<<"T3=";
+t2.puttime();
+getch();
+}
+

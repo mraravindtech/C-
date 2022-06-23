@@ -1,0 +1,32 @@
+#include<iostream.h>
+#include<conio.h>
+#include<iomanip.h>
+#include<string.h>
+class book
+{
+private:
+int book_no;
+char book_name[10];
+public:
+book() //constructor
+{
+book_no=10;
+strcpy(book_name,"Programming with C++");
+}
+~book() //destructor
+{ book_no=0;
+strcpy(book_name,"");
+cout<<"destructors invoked"<<endl;
+disp();
+}
+void disp()
+{
+cout<<book_no<<setw(5)<<book_name<<endl;
+} };
+void main()
+{
+book s1;
+clrscr();
+s1.disp();
+getch();
+}

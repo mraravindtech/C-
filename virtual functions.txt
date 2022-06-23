@@ -1,0 +1,35 @@
+#include<iostream.h>
+#include<conio.h>
+class sample
+{
+private:
+inta,b,res;
+public:
+virtual void getdata();
+virtual void calc();
+virtual void display();
+};
+void sample::getdata()
+{
+cout<<"Enter the a,b values "<<endl;
+cin>>a>>b;
+}
+void sample::calc()
+{
+res=a+b;
+}
+void sample::display()
+{
+cout<<"The result value is "<<res<<endl;
+}
+void main()
+{
+clrscr();
+sampleobj;
+sample *obj1;
+obj1=&obj;
+obj1->getdata();
+obj1->calc();
+obj1->display();
+getch();
+}

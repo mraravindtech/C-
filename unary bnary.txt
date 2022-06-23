@@ -1,0 +1,57 @@
+#include<iostream.h>
+#include<string.h>
+#include<conio.h>
+class ool
+{
+private:
+char str[30];
+int n, fac;
+public:
+ool()
+{
+strcpy(str,"");
+fac=1;
+}
+void operator = (char*cptr)
+{
+strcpy(str,cptr);
+}
+void operator--();
+void display();
+ool operator+(ool t1) // Binary operator overloading
+{
+ool t2;
+strcpy(t2.str,str);
+strcat(t2.str,t1.str);
+return t2;
+}
+void show_string(char*obj)
+{
+cout<<obj<<str<<endl;
+}
+};
+void ool::operator--() // Unary operator overloading
+{
+cout<<"Enter the n value "<<endl;
+cin>>n;
+for(int i=1;i<=n;i++)
+fac*=i;
+}
+void ool::display()
+{
+cout<<"The factorial value is "<<fac<<endl;
+}
+void main()
+{
+clrscr();
+ool s1,s2,s3,obj;
+s1="Bala";
+s2=" Sundari";
+s3=s1+s2;
+s1.show_string("String1 ");
+s2.show_string("String2 ");
+s3.show_string("String3 ");
+--obj;
+obj.display();
+getch();
+}
